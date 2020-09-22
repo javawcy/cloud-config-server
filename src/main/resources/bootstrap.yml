@@ -12,7 +12,9 @@ spring:
     name: config-server
   profiles:
     active: dev
-  security:
-    user:
-      name: admin
-      password: admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, bus-refresh
